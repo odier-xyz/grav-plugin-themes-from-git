@@ -1,0 +1,46 @@
+name: Themes From Git
+slug: themes-from-git
+type: plugin
+version: 1.0.0
+description: Themes from GIT repositories
+icon: shopping-basket
+author:
+  name: Jérôme ODIER
+  email: jerome@odier.xyz
+homepage: https://github.com/jodier/grav-plugin-themes-from-git
+keywords: grav, plugin, theme, git
+bugs: https://github.com/jodier/grav-plugin-themes-from-git/issues
+docs: https://github.com/jodier/grav-plugin-themes-from-git/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    repos:
+      name: repos
+      type: list
+      style: vertical
+      label: Themes
+      fields:
+        .theme:
+          type: text
+          label: Theme name
+        .repo_url:
+          type: text
+          label: Git Repository
+        .repo_branch:
+          type: text
+          label: Branch
