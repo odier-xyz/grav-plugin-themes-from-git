@@ -61,14 +61,12 @@ $(document).ready(() => {
 		const rep = $(item);
 
 		const div = $('<div class="form-field"></div>');
-
 		const btn = $(`<button class="button" type="button">Synchronize</button>`);
-
-		const msg = $(`<span class="mx-2"></span>`);
+		const msg = $(`<span class="xxxxxxxx"></span>`);
 
 		rep.append(div);
 		div.append(btn);
-		msg.append(msg);
+		div.append(msg);
 
 		/*------------------------------------------------------------------------------------------------------------*/
 
@@ -87,11 +85,11 @@ $(document).ready(() => {
 
 				if(data.status === 'success')
 				{
-					msg.removeClass('text-error').addClass('text-success').text('Synchronization success');
+					msg.attr('style', 'margin-left: 1rem !important; color: #32B643 !important;').text('Synchronization success');
 				}
 				else
 				{
-					msg.removeClass('text-success').addClass('text-error').text('Synchronization error');
+					msg.attr('style', 'margin-left: 1rem !important; color: #E85600 !important;').text('Synchronization error');
 				}
 
 			}).fail(() => {
