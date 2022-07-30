@@ -85,11 +85,11 @@ $(document).ready(() => {
 
 				if(data.status === 'success')
 				{
-					msg.attr('style', 'margin-left: 1rem !important; color: #32B643 !important;').text('Synchronization success');
+					msg.attr('style', 'margin-left: 0.5rem !important; color: #32B643 !important;').text('Synchronization success');
 				}
 				else
 				{
-					msg.attr('style', 'margin-left: 1rem !important; color: #E85600 !important;').text('Synchronization error');
+					msg.attr('style', 'margin-left: 0.5rem !important; color: #E85600 !important;').text('Synchronization error');
 				}
 
 			}).fail(() => {
