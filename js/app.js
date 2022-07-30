@@ -64,8 +64,11 @@ $(document).ready(() => {
 
 		const btn = $(`<button class="button" type="button">Synchronize</button>`);
 
+		const msg = $(`<span class="mx-2"></span>`);
+
 		rep.append(div);
 		div.append(btn);
+		msg.append(msg);
 
 		/*------------------------------------------------------------------------------------------------------------*/
 
@@ -84,11 +87,11 @@ $(document).ready(() => {
 
 				if(data.status === 'success')
 				{
-					alert('Success');
+					msg.removeClass('text-error').addClass('text-success').text('Synchronization success');
 				}
 				else
 				{
-					alert('Error');
+					msg.removeClass('text-success').addClass('text-error').text('Synchronization error');
 				}
 
 			}).fail(() => {
